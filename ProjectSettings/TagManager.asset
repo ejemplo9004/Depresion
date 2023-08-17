@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - mano
+  - Nota
   layers:
   - Default
   - TransparentFX
