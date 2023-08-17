@@ -7,13 +7,25 @@ using UnityEngine.SceneManagement;
 public class ControlEscena : MonoBehaviour
 {
     public Transicion transicion;
+    public static ControlEscena singleton;
 
-    public  void GoToScene( int sceneIndex)
+    private void Awake()
+    {
+        if (singleton == null)
+        {
+            singleton = this;
+        }
+        else
+        {
+            DestroyImmediate(gameObject);
+        }
+    }
+    public void GoToScene(string sceneIndex)
     {
         StartCoroutine(GoToSceneRoutine(sceneIndex));
     }
 
-    IEnumerator GoToSceneRoutine(int sceneIndex)
+    IEnumerator GoToSceneRoutine(string sceneIndex)
     {
         transicion.FadeOut();
         yield return new WaitForSeconds(transicion.fadeDuration);
