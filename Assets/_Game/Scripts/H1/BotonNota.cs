@@ -20,15 +20,15 @@ public class BotonNota : MonoBehaviour
 			
 			if (accionable)
 			{
-				ControlH1.singeton.SumarPuntos();
+				ControlH1.singleton.SumarPuntos();
 				material.color = Color.green;
-				ControlH1.singeton.ActualizarPuntosTexto();
+				ControlH1.singleton.ActualizarPuntosTexto();
 			}
 			else
 			{
-				ControlH1.singeton.RestarPuntos();
+				ControlH1.singleton.RestarPuntos();
 				material.color = Color.red;
-				ControlH1.singeton.ActualizarPuntosTexto();
+				ControlH1.singleton.ActualizarPuntosTexto();
 			}
 			accionable = false;
 

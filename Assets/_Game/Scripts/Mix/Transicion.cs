@@ -7,11 +7,12 @@ public class Transicion : MonoBehaviour
 {
     public float fadeDuration = 2;
     public Color fadeColor;
-    private Renderer rend;
+    public SpriteRenderer render;
     public bool fadeOnStart = true;
+    
     void Start()
     {
-        rend = GetComponent<Renderer>();
+        //rend = GetComponent<Renderer>();
         if (fadeOnStart)
             FadeIn();
     }
@@ -34,15 +35,14 @@ public class Transicion : MonoBehaviour
         float timer = 0;
         while (timer <= fadeDuration)
         {
-            Color newColor = fadeColor;
-            newColor.a = Mathf.Lerp(alphaIn, alphaOut, timer/fadeDuration);
-            rend.material.SetColor("_Color", newColor);
+            fadeColor.a = Mathf.Lerp(alphaIn, alphaOut, timer/fadeDuration);
+            render.color = fadeColor;
+            
             timer += Time.deltaTime;
             yield return null;
         }
-        Color newColor2 = fadeColor;
-        newColor2.a = alphaOut;
-        rend.material.SetColor("_Color", newColor2);
+        fadeColor.a = alphaOut;
+        render.color = fadeColor;
         
     }
     

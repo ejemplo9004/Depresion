@@ -6,16 +6,16 @@ using TMPro;
 
 public class ControlH1 : MonoBehaviour
 {
-    public static ControlH1 singeton;
+    public static ControlH1 singleton;
 	public int puntos;
 	public TextMeshProUGUI puntaje;
 	
 
 	private void Awake()
 	{
-		if (singeton == null)
+		if (singleton == null)
 		{
-			singeton = this;
+			singleton = this;
 		}
 		else
 		{
