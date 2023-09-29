@@ -25,6 +25,8 @@ public class ControlH1 : MonoBehaviour
 	public void SumarPuntos()
 	{
 		puntos+=3;
+		NotasSprite.notasSprite.Sumar();
+		
 	}
 	public void RestarPuntos()
 	{
@@ -38,6 +40,8 @@ public class ControlH1 : MonoBehaviour
 	{
 		puntaje.text = "Puntos: " + puntos.ToString();
 	}
+
+	
 
 
 }
