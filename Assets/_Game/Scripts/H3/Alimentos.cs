@@ -7,24 +7,7 @@ public class Alimentos : MonoBehaviour
     
     public TipoAlimentos alimento;
     public bool enMano;
-    private XRGrabInteractable grabInteractable;
-
-    private void Awake()
-    {
-        grabInteractable = GetComponent<XRGrabInteractable>();
-        grabInteractable.onSelectEntered.AddListener(OnGrabbed);
-        grabInteractable.onSelectExited.AddListener(OnReleased);
-    }
-
-    private void OnGrabbed(XRBaseInteractor interactor)
-    {
-        enMano = true;
-    }
-
-    private void OnReleased(XRBaseInteractor interactor)
-    {
-        enMano = false;
-    }
+ 
 
     private void OnTriggerEnter(Collider other)
     {
@@ -37,6 +20,22 @@ public class Alimentos : MonoBehaviour
             Canasta.canasta.ContadorAlimento(alimento);
             Destroy(gameObject);
 
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("mano"))
+        {
+            enMano = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("mano"))
+        {
+            enMano = false;
         }
     }
 }
