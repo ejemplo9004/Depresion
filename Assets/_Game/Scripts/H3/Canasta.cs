@@ -9,11 +9,17 @@ public class Canasta : MonoBehaviour
     public int cantidadMalos;
     public Text cantidadMalosTexto;
     public Text cantidadBuenosTexto;
+    public int cantidadTotales;
     private void Awake()
     {
         canasta = this;
     }
+    private void Start()
+    {
+        cantidadTotales = 0;
+    }
 
+    
     public void ContadorAlimento(TipoAlimentos tipo)
     {
         switch (tipo)

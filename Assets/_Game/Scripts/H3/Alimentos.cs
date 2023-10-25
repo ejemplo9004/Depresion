@@ -7,8 +7,8 @@ public class Alimentos : MonoBehaviour
     
     public TipoAlimentos alimento;
     public bool enMano;
- 
 
+    
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("ENTRANDO");
@@ -21,6 +21,11 @@ public class Alimentos : MonoBehaviour
             Destroy(gameObject);
 
         }
+        else
+        {
+            enMano = false;
+        }
+
     }
 
     private void OnTriggerStay(Collider other)

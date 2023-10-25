@@ -1110,7 +1110,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 384723622}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.11129259
@@ -1230,6 +1230,7 @@ MonoBehaviour:
   cantidadMalos: 0
   cantidadMalosTexto: {fileID: 1093936402}
   cantidadBuenosTexto: {fileID: 1445559262}
+  cantidadTotales: 0
 --- !u!1 &450651325
 GameObject:
   m_ObjectHideFlags: 0
@@ -1247,7 +1248,7 @@ GameObject:
   - component: {fileID: 450651332}
   m_Layer: 0
   m_Name: LeftHand Controller
-  m_TagString: Untagged
+  m_TagString: mano
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1826,7 +1827,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 450651325}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.11129259
@@ -3497,7 +3498,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alimento: 1
-  enMano: 0
+  enMano: 1
 --- !u!1 &1737791960
 GameObject:
   m_ObjectHideFlags: 0
