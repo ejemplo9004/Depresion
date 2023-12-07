@@ -9,6 +9,7 @@ TagManager:
   - Bueno
   - Alimento
   - Canasta
+  - cuchillo
   layers:
   - Default
   - TransparentFX
