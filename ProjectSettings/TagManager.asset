@@ -6,6 +6,10 @@ TagManager:
   tags:
   - mano
   - Nota
+  - Bueno
+  - Alimento
+  - Canasta
+  - cuchillo
   layers:
   - Default
   - TransparentFX
