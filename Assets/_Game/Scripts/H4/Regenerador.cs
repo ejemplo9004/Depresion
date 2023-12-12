@@ -13,4 +13,20 @@ public class Regenerador : MonoBehaviour
     {
         enMano = false;
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            enMano = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+
+        }
+    }
 }
