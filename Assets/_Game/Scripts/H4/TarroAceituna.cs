@@ -32,6 +32,7 @@ public class TarroAceituna : MonoBehaviour
         {
             Instantiate(aceituna, referenciaHueco.transform.position, referenciaHueco.transform.rotation);
         }
-
     }
+
+   
 }

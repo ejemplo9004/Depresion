@@ -38,7 +38,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Base_textura:
-        m_Texture: {fileID: 2800000, guid: 514df8a87ff2fec48a82e568e91009e4, type: 3}
+        m_Texture: {fileID: 8400000, guid: a28c7b5807747744280abdeb36eaa244, type: 2}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -67,8 +67,8 @@ Material:
     - _ZTest: 4
     - _ZWrite: 0
     - _ZWriteControl: 0
-    - _fuzzines: 0.234
-    - _hueRange: 0.389
+    - _fuzzines: 0.002
+    - _hueRange: 0.478
     m_Colors:
     - _Color: {r: 0.21568623, g: 0.8745099, b: 0.29019606, a: 1}
   m_BuildTextureStacks: []
